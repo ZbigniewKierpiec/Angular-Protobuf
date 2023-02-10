@@ -1,0 +1,29 @@
+<h1 style="text-align: center; margin-bottom: 3rem">Protobuf Thursday</h1>
+<h1>
+  {{ title }}
+</h1>
+
+<div class="proto">
+  <input class="active2" [(ngModel)]="input" type="text" />
+  <button [class.active]="input" [disabled]="!input" (click)="send()">
+    Send Proto File
+  </button>
+</div>
+
+<div class="con">
+  <h1>Message sended encoded to the Server:</h1>
+
+  <span>{{ message }}</span> <span *ngIf="size">Size:{{ size }}</span>
+</div>
+
+<div class="con">
+  <h1>Message recived decoded in Server:</h1>
+
+  <span>{{ server }}</span>
+</div>
+
+<div class="con">
+  <h1>Message recived from the Server using Socket.io:</h1>
+
+  <span>{{ dataServer }}</span>
+</div>
